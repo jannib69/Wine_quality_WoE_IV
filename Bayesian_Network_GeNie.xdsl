@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in trial version of GeNIe, which can be used for evaluation purposes only -->
+<smile version="1.0" id="woe_coarse_df" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="density_bin">
+			<state id="nizek" />
+			<state id="visok" />
+			<probabilities>0.5006926273664768 0.4993073726335231</probabilities>
+		</cpt>
+		<cpt id="alcohol_bin">
+			<state id="nizek" />
+			<state id="visok" />
+			<parents>density_bin</parents>
+			<probabilities>0.2490009222256379 0.750999077774362 0.7660295930949446 0.2339704069050555</probabilities>
+		</cpt>
+		<cpt id="chlorides_bin">
+			<state id="nizek" />
+			<state id="visok" />
+			<parents>alcohol_bin</parents>
+			<probabilities>0.3487101669195751 0.6512898330804249 0.6692692067457838 0.3307307932542161</probabilities>
+		</cpt>
+		<cpt id="volatile_acidity_bin">
+			<state id="nizek" />
+			<state id="visok" />
+			<parents>chlorides_bin</parents>
+			<probabilities>0.6512758201701093 0.3487241798298906 0.3563182527301092 0.6436817472698908</probabilities>
+		</cpt>
+		<cpt id="citric_acid_bin">
+			<state id="nizek" />
+			<state id="visok" />
+			<probabilities>0.5205479452054794 0.4794520547945205</probabilities>
+		</cpt>
+		<cpt id="quality" target="true">
+			<state id="nizek" />
+			<state id="visok" />
+			<parents>alcohol_bin volatile_acidity_bin</parents>
+			<probabilities>0.3820224719101123 0.6179775280898876 0.6916715888954519 0.3083284111045481 0.1609263657957245 0.8390736342042756 0.2173913043478261 0.7826086956521739</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 5.0.4830.2 EVALUATION" name="woe_coarse_df">
+			<node id="alcohol_bin">
+				<name>alcohol_bin</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>321 250 393 298</position>
+			</node>
+			<node id="density_bin">
+				<name>density_bin</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>204 87 276 135</position>
+			</node>
+			<node id="volatile_acidity_bin">
+				<name>volatile acidity_bin</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>477 70 549 118</position>
+			</node>
+			<node id="chlorides_bin">
+				<name>chlorides_bin</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>343 49 415 97</position>
+			</node>
+			<node id="citric_acid_bin">
+				<name>citric acid_bin</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>664 116 736 164</position>
+			</node>
+			<node id="quality">
+				<name>quality</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>531 281 603 329</position>
+			</node>
+			<textbox>
+				<caption>Input file: woe_coarse_df\nData rows: 6497\nElapsed time: 0.437s\n\nLearning algorithm: Bayesian Search\nAlgorithm parameters:\nIterations: 20\nMax parent count: 8\nSample size: 50\nLink probability: 0.1\nPrior link probability: 0.001\nSeed: 0\nMax search time: 0\nScore by accuracy (6-fold), class variable: quality\nNo background knowledge\n\nBest accuracy in iteration 0: 0.732954 (4762/6497)\nEM Log Likelihood: -24619.9</caption>
+				<font color="000000" name="Arial" size="8" />
+				<position>24 423 269 675</position>
+			</textbox>
+		</genie>
+	</extensions>
+</smile>
